@@ -25,16 +25,16 @@ int main()
     size_t n;
     vector<string> numbers;
 
-//    cin >> n;
-//    for (size_t i = 0; i < n; i++) {
-//        string number;
-//        cin >> number;
-//        numbers.push_back(number);
-//    }
+    cin >> n;
+    for (size_t i = 0; i < n; i++) {
+        string number;
+        cin >> number;
+        numbers.push_back(number);
+    }
 
-    n = 3;
+//    n = 3;
 //    numbers.push_back("123456789");
-    numbers.push_back("100000000");
+//    numbers.push_back("100000000");
 //    numbers.push_back("100123456");
 
 //    n = 4;
@@ -69,7 +69,7 @@ int main()
                 string ans = number.substr(start, len);
                 auto res = counts.insert({ ans, i });
                 if (!res.second) {
-                    res.first->second = -1;
+                    if (res.first->second != int(i)) res.first->second = -1;
                 }
             }
         }
