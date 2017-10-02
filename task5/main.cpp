@@ -57,6 +57,7 @@ int main(int argc, char **argv)
     set<string> ans[2];
     for (int i = 1; i <= n; ++i) ans[i <= e].insert(to_string(i));
 
+<<<<<<< Updated upstream
     int free[2] = { e, n - e };
     const int limits[2][2] = {{ e + 1, n }, { 1, e }};
     for (const auto &name : good) {
@@ -70,6 +71,12 @@ int main(int argc, char **argv)
         } else {
             bad[type].push_back(name);
         }
+=======
+    list<string> script;
+    size_t ce = 0, cn = e + 1;
+    for (size_t i = 0; i < n; ++i) {
+
+>>>>>>> Stashed changes
     }
 
     while (!bad[0].empty() || !bad[1].empty()) {
